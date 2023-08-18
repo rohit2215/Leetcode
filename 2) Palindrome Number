@@ -1,0 +1,18 @@
+lass Solution {
+public:
+    bool isPalindrome(int x) {
+    int n=x;
+     if(x<0){
+      return false;
+     }
+   long long int num=0;
+   while(x){
+    num=num*10;   //main logic strts here
+    num=num+x%10;
+    x=x/10;      // logic ends here 
+   }
+   if(num==n){
+    return true;
+   }
+   return false;
+    
