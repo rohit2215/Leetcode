@@ -17,3 +17,8 @@ public:
 }                        
                         
                         
+Time complexity:- O(n)
+space complexity= O(1) because the space used by the map and other variables (n, total, i) 
+remains constant regardless of the size of the input string. 
+The map has a fixed number of entries (7 entries for the Roman numerals),
+ and the other variables are of primitive types and don't consume additional space as the input size increases.
