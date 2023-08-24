@@ -1,0 +1,14 @@
+class solution{
+public{
+  bool isAcronym(vector<string>&words, string s){
+  int t= "";
+  for(auto w:words){
+  t+=w[0];
+  }
+  return t==s;
+}  
+  
+  
+Time complexity: o(N) { single for loop}
+Space complexity:-O(N), where N is the number of words in the words vector.
+  
