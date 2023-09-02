@@ -1,0 +1,17 @@
+ class Solution {
+public:
+    int smallestEvenMultiple(int n) {
+        // Check if n is even. If not, then the smallest even multiple is 2n.
+        if (n % 2 == 1) {
+            return 2 * n;
+        }
+
+        // Otherwise, start from n and keep adding 2 until we find a number that is divisible by n.
+        int i = n;
+        while (i % n != 0) {
+            i += 2;
+        }
+
+        return i;
+    }
+};
