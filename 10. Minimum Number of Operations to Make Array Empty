@@ -1,0 +1,24 @@
+#include <unordered_map>
+#include <vector>
+
+class Solution {
+public:
+    int minOperations(vector<int>& nums) {
+        // frequency map
+        unordered_map <int, int> mp;
+        for(int num : nums)
+            mp[num]++;
+
+        // calculate ans
+        int ans = 0;
+        for(auto &it : mp) {
+            // single element - can't be removed
+            if(it.second == 1) return -1;
+            //  add count/3 to ans
+            ans += it.second/3;
+            // if remainder, add 1 
+            if(it.second % 3) ans++;
+        }
+        return ans;
+    }
+};
